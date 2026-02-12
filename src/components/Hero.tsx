@@ -58,7 +58,7 @@ export const Hero = () => {
   }, [text, isDeleting, lineIndex]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 px-6 overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center pt-20 px-6 overflow-hidden">
       {/* Background Animation */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] animate-pulse-slow" />
@@ -82,7 +82,7 @@ export const Hero = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
             </span>
-            Available for SDE Roles
+            {/* Available for SDE Roles */}
           </motion.div>
 
           <motion.h1

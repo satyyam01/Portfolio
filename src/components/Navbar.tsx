@@ -11,12 +11,12 @@ export const Navbar = () => {
       animate={{ y: 0 }}
       className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 backdrop-blur-md bg-zinc-950/50 border-b border-zinc-800/50"
     >
-      <div className="flex items-center gap-2">
-        <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center font-bold text-white">
+      <Link href="#hero" className="flex items-center gap-2 group hover:opacity-80 transition-opacity">
+        <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center font-bold text-white transition-transform group-hover:scale-110">
           S
         </div>
         <span className="font-semibold tracking-tight hidden sm:block">Satyam Nautiyal</span>
-      </div>
+      </Link>
 
       <div className="hidden md:flex items-center gap-8 text-sm text-zinc-400">
         <Link href="#about" className="hover:text-white transition-colors">About</Link>

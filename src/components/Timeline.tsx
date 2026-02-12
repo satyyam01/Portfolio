@@ -14,7 +14,7 @@ const nodes = [
 
 export const Timeline = () => {
   return (
-    <section className="py-24 px-6">
+    <section id="timeline" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">Journey</h2>
