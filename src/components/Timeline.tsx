@@ -12,7 +12,7 @@ const nodes = [
   { id: 6, label: "AI Engine", icon: Cpu, desc: "LLM + RAG (Pinecone)" },
 ];
 
-export const SystemDesign = () => {
+export const Timeline = () => {
   return (
     <section className="py-24 px-6">
       <div className="max-w-7xl mx-auto">

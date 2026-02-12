@@ -13,13 +13,13 @@ export const Contact = () => {
               Let’s Connect.
             </h2>
             <p className="text-zinc-500 text-lg">
-              Currently seeking Software Development Engineer roles focused on backend architecture and AI systems.
+              Looking to join teams where I can learn, contribute, and refine my engineering depth.
             </p>
           </div>
 
           <div className="w-full md:w-auto space-y-4">
             <a
-              href="mailto:hi@satyam.dev"
+              href="mailto:nautiyalsatyam01@gmail.com<"
               className="flex items-center justify-between gap-8 p-6 rounded-2xl bg-white text-black font-bold group hover:bg-zinc-200 transition-all"
             >
               <div className="flex items-center gap-3">
@@ -50,14 +50,9 @@ export const Contact = () => {
         
         <footer className="mt-32 pt-12 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center font-bold text-white">
-              S
+            <div className="text-zinc-600 text-sm">
+            © 2026 Satyam Nautiyal.
             </div>
-            <span className="font-semibold tracking-tight">Satyam Nautiyal</span>
-          </div>
-          
-          <div className="text-zinc-600 text-sm">
-            © 2024 Satyam Nautiyal. Engineered for Excellence.
           </div>
           
           <div className="flex gap-8 text-zinc-500 text-xs font-mono">

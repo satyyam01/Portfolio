@@ -2,22 +2,22 @@ export const TECH_STACK = [
   {
     domain: "Backend Systems",
     philosophy: "Designing APIs, managing data integrity, and optimizing latency.",
-    tools: ["Node.js", "Express.js", "Redis", "PostgreSQL", "MongoDB", "REST APIs", "JWT Authentication"],
+    tools: ["Node.js", "Express.js", "Redis", "PostgreSQL", "MongoDB", "REST APIs"],
   },
   {
     domain: "AI & Applied ML",
     philosophy: "Building intelligent retrieval systems and predictable models.",
-    tools: ["RAG Systems", "Pinecone", "Cohere", "LangChain", "LangGraph", "LightGBM", "SHAP"],
+    tools: ["RAG Systems", "Pinecone", "Cohere", "LangChain", "LangGraph", "Classical ML", "SHAP"],
   },
   {
     domain: "Frontend",
     philosophy: "Architecting clean, responsive, and type-safe user interfaces.",
-    tools: ["React", "TypeScript", "TailwindCSS", "Next.js", "Vite", "Framer Motion"],
+    tools: ["React", "TypeScript", "TailwindCSS", "Next.js", "Vite"],
   },
   {
     domain: "Dev & Tooling",
     philosophy: "Ensuring consistent environments and efficient delivery.",
-    tools: ["Docker", "Git", "AWS Basics", "Postman", "Bash", "Linux"],
+    tools: ["Microservices", "Docker", "Git", "AWS Basics", "Postman", "Bash"],
   },
 ];
 
