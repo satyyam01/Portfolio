@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform, useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
 import { ChevronRight, Github, Code2, Download } from "lucide-react";
 import Image from "next/image";
@@ -17,6 +17,10 @@ export const Hero = () => {
   const [lineIndex, setLineIndex] = useState(0);
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
+
+  // Scroll Handling
+  const { scrollY } = useScroll();
+  const bgOpacity = useTransform(scrollY, [0, 600], [1, 0]);
 
   // Parallax Setup
   const mouseX = useMotionValue(0);
@@ -61,11 +65,14 @@ export const Hero = () => {
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center pt-20 px-6 overflow-hidden">
       {/* Background Animation */}
-      <div className="absolute inset-0 z-0">
+      <motion.div 
+        style={{ opacity: bgOpacity }}
+        className="absolute inset-0 z-0"
+      >
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] animate-pulse-slow" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-600/10 rounded-full blur-[120px] animate-pulse-slow" />
         <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
-      </div>
+      </motion.div>
 
       <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24 max-w-7xl mx-auto w-full">
         {/* Left Side: Text Block */}

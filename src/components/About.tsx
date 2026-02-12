@@ -5,7 +5,7 @@ import { User, Target, Zap } from "lucide-react";
 
 export const About = () => {
   return (
-    <section id="about" className="py-24 px-6 bg-zinc-950 relative overflow-hidden">
+    <section id="about" className="py-24 px-6 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Side: Title & Badge */}
@@ -90,7 +90,7 @@ export const About = () => {
                     <h4 className="font-bold">Outside of Code</h4>
                   </div>
                   <p className="text-sm text-zinc-500">
-                    Traing regularly, following Formula 1, and refining long-term discipline.
+                    Training regularly, following Formula 1, and refining long-term discipline.
                   </p>
                </motion.div>
             </div> */}

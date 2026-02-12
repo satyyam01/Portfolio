@@ -5,7 +5,7 @@ import { TECH_STACK } from "@/lib/constants";
 
 export const TechStack = () => {
   return (
-    <section id="stack" className="py-24 px-6 bg-zinc-950">
+    <section id="stack" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">Technical Stack</h2>

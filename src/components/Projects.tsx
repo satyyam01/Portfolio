@@ -16,7 +16,7 @@ export const Projects = () => {
       <div className="max-w-7xl mx-auto">
         <div className="mb-20">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">Featured Projects</h2>
-          <p className="text-zinc-500">Building solution for problems that matter.</p>
+          <p className="text-zinc-500">Building solutions for problems that matter.</p>
         </div>
 
         <div className="space-y-32">
