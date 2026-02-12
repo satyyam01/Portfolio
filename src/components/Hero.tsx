@@ -4,6 +4,7 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
 import { ChevronRight, Github, Code2, Download } from "lucide-react";
 import Image from "next/image";
+import { Spaceship } from "@/components/Spaceship";
 
 const TYPING_LINES = [
   "Backend Developer",
@@ -72,18 +73,7 @@ export const Hero = () => {
           style={{ x: translateTextX, y: translateTextY }}
           className="text-center lg:text-left flex-[1.2]"
         >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-zinc-800 bg-zinc-900/50 text-xs font-medium text-zinc-400 mb-8"
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-            </span>
-            {/* Available for SDE Roles */}
-          </motion.div>
+          <Spaceship />
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
