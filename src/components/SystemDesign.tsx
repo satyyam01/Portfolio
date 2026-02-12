@@ -17,8 +17,8 @@ export const SystemDesign = () => {
     <section className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">How I Think About Systems</h2>
-          <p className="text-zinc-500">Designing for scalability, resilience, and intelligence.</p>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">Journey</h2>
+          <p className="text-zinc-500">From fundamentals to designing for scalability, resilience, and intelligence.</p>
         </div>
 
         <div className="relative flex flex-col items-center gap-12">

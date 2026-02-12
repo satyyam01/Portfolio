@@ -1,34 +1,25 @@
-export const TECH_STACK = {
-  backend: [
-    { name: "Node.js", level: 90 },
-    { name: "Express.js", level: 85 },
-    { name: "Redis", level: 75 },
-    { name: "PostgreSQL", level: 80 },
-    { name: "MongoDB", level: 85 },
-    { name: "REST APIs", level: 95 },
-    { name: "JWT Auth", level: 90 },
-  ],
-  ai: [
-    { name: "RAG Systems", level: 80 },
-    { name: "Pinecone", level: 70 },
-    { name: "Cohere", level: 75 },
-    { name: "LangChain", level: 80 },
-    { name: "LangGraph", level: 70 },
-    { name: "LightGBM", level: 65 },
-  ],
-  frontend: [
-    { name: "React", level: 85 },
-    { name: "TypeScript", level: 90 },
-    { name: "TailwindCSS", level: 95 },
-    { name: "Next.js", level: 85 },
-  ],
-  devops: [
-    { name: "Docker", level: 70 },
-    { name: "Git", level: 90 },
-    { name: "AWS", level: 60 },
-    { name: "Postman", level: 95 },
-  ],
-};
+export const TECH_STACK = [
+  {
+    domain: "Backend Systems",
+    philosophy: "Designing APIs, managing data integrity, and optimizing latency.",
+    tools: ["Node.js", "Express.js", "Redis", "PostgreSQL", "MongoDB", "REST APIs", "JWT Authentication"],
+  },
+  {
+    domain: "AI & Applied ML",
+    philosophy: "Building intelligent retrieval systems and predictable models.",
+    tools: ["RAG Systems", "Pinecone", "Cohere", "LangChain", "LangGraph", "LightGBM", "SHAP"],
+  },
+  {
+    domain: "Frontend",
+    philosophy: "Architecting clean, responsive, and type-safe user interfaces.",
+    tools: ["React", "TypeScript", "TailwindCSS", "Next.js", "Vite", "Framer Motion"],
+  },
+  {
+    domain: "Dev & Tooling",
+    philosophy: "Ensuring consistent environments and efficient delivery.",
+    tools: ["Docker", "Git", "AWS Basics", "Postman", "Bash", "Linux"],
+  },
+];
 
 export const PROJECTS = [
   {

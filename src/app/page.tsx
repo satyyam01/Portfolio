@@ -5,7 +5,7 @@ import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { TechStack } from "@/components/TechStack";
 import { Projects } from "@/components/Projects";
-import { ProblemSolving } from "@/components/ProblemSolving";
+// ?import { ProblemSolving } from "@/components/ProblemSolving";
 import { SystemDesign } from "@/components/SystemDesign";
 import { Timeline } from "@/components/Timeline";
 import { Contact } from "@/components/Contact";
@@ -18,7 +18,7 @@ export default function Home() {
       <About />
       <Projects />
       <TechStack />
-      <ProblemSolving />
+      {/* <ProblemSolving /> */}
       <SystemDesign />
       <Timeline />
       <Contact />
