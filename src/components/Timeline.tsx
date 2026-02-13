@@ -1,15 +1,37 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { User, Server, Database, Shield, Zap, Cpu } from "lucide-react";
+import { GraduationCap, Landmark, Building2, Briefcase } from "lucide-react";
 
 const nodes = [
-  { id: 1, label: "User Interface", icon: User, desc: "React + TailwindCSS" },
-  { id: 2, label: "Authentication", icon: Shield, desc: "JWT + Bcrypt" },
-  { id: 3, label: "API Gateway", icon: Server, desc: "Next.js / Express" },
-  { id: 4, label: "Caching Layer", icon: Zap, desc: "Redis" },
-  { id: 5, label: "Primary DB", icon: Database, desc: "PostgreSQL / Mongo" },
-  { id: 6, label: "AI Engine", icon: Cpu, desc: "LLM + RAG (Pinecone)" },
+  { 
+    id: 1, 
+    date: "Sept 2022",
+    label: "Beginning the Voyage", 
+    icon: GraduationCap, 
+    desc: "Started B.Tech in Computer Science & Engineering, laying the foundation in core systems and algorithms." 
+  },
+  { 
+    id: 2, 
+    date: "June – Aug 2024",
+    label: "DRDO Internship", 
+    icon: Landmark, 
+    desc: "Engineered secure and efficient solutions for defense-grade applications, focusing on reliability and precision." 
+  },
+  { 
+    id: 3, 
+    date: "Dec 2024 – Feb 2025",
+    label: "Infosys Internship", 
+    icon: Building2, 
+    desc: "Developed enterprise-scale software solutions using industry-standard backend patterns and cloud fundamentals." 
+  },
+  { 
+    id: 4, 
+    date: "Dec 2025 – Present",
+    label: "Accenture Internship", 
+    icon: Briefcase, 
+    desc: "Currently refining high-performance systems and contributing to large-scale digital transformation projects." 
+  },
 ];
 
 export const Timeline = () => {
@@ -34,10 +56,18 @@ export const Timeline = () => {
               viewport={{ once: true }}
               className={`relative z-10 flex items-center w-full md:w-1/2 ${idx % 2 === 0 ? "md:justify-start md:pr-12 md:mr-[50%]" : "md:justify-end md:pl-12 md:ml-[50%]"}`}
             >
-              <div className={`flex flex-col ${idx % 2 === 0 ? "md:items-end text-right" : "md:items-start text-left"} p-6 rounded-2xl bg-zinc-900 border border-zinc-800 w-full hover:border-blue-500/50 transition-all`}>
-                <div className="w-10 h-10 rounded-lg bg-zinc-800 flex items-center justify-center mb-4">
-                  <node.icon className="w-5 h-5 text-blue-500" />
+              <div className={`flex flex-col ${idx % 2 === 0 ? "md:items-end text-right" : "md:items-start text-left"} p-6 rounded-2xl bg-zinc-900 border border-zinc-800 w-full hover:border-blue-500/50 transition-all group`}>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-zinc-800 flex items-center justify-center group-hover:bg-blue-600/20 transition-colors">
+                    <node.icon className="w-5 h-5 text-blue-500" />
+                  </div>
+                  <span className="text-xs font-mono text-blue-500/80 bg-blue-500/5 px-2 py-1 rounded md:hidden">
+                    {node.date}
+                  </span>
                 </div>
+                <span className="hidden md:block text-xs font-mono text-blue-500/80 mb-2 uppercase tracking-wider">
+                  {node.date}
+                </span>
                 <h3 className="text-lg font-bold mb-1">{node.label}</h3>
                 <p className="text-sm text-zinc-500">{node.desc}</p>
               </div>
