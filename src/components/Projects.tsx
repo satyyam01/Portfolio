@@ -81,10 +81,10 @@ export const Projects = () => {
                       <Github className="w-4 h-4" />
                       GitHub
                     </a>
-                    <a href={project.demo} className="flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 transition-colors text-sm font-medium">
+                    {/* <a href={project.demo} className="flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 transition-colors text-sm font-medium">
                       <ExternalLink className="w-4 h-4" />
                       Live Demo
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </motion.div>

@@ -2,12 +2,12 @@ export const TECH_STACK = [
   {
     domain: "Backend Systems",
     philosophy: "Designing APIs, managing data integrity, and optimizing latency.",
-    tools: ["Node.js", "Express.js", "Redis", "PostgreSQL", "MongoDB", "REST APIs"],
+    tools: ["Javascript", "Node.js", "Express.js", "Python", "Flask", "Redis", "PostgreSQL", "MongoDB"],
   },
   {
     domain: "AI & Applied ML",
     philosophy: "Building intelligent retrieval systems and predictable models.",
-    tools: ["RAG Systems", "Pinecone", "Cohere", "LangChain", "LangGraph", "Classical ML", "SHAP"],
+    tools: ["RAG Systems", "Groq", "Cohere", "Pinecone", "LangChain", "LangGraph", "Classical ML", "SHAP"],
   },
   {
     domain: "Frontend",
@@ -28,7 +28,7 @@ export const PROJECTS = [
     subtitle: "Multi-Role RFID Farm Operations Platform",
     description: "A comprehensive farm management system handling animal tracking, yield analytics, and operational workflows across multiple roles.",
     longDescription: "FarmTrack handles multi-role RBAC for Admins, Workers, and Doctors. It simulates RFID tracking and provides yield analytics, medication schedules, and checkup tracking. Built with a focus on real-time data and secure access.",
-    tech: ["Node.js", "Express", "MongoDB", "Redis", "React", "Typescript"],
+    tech: ["Node.js", "Express", "MongoDB", "Redis", "SMTP", "Typescript", "React"],
     features: [
       "JWT-based role access control (Admin, Worker, Doctor)",
       "Redis-backed OTP and caching workflows",
@@ -46,7 +46,7 @@ export const PROJECTS = [
     subtitle: "AI Journaling Assistant",
     description: "An AI-powered journaling platform that tracks mental well-being and provides context-aware insights.",
     longDescription: "Lumora uses LLMs to provide feedback on journal entries, tracking streaks and awarding badges. It features complex logic for streak calculations based on entry date vs createdAt to maintain consistency across timezones.",
-    tech: ["Next.js", "LangChain", "OpenAI", "MongoDB", "TailwindCSS"],
+    tech: ["Node.js", "Express", "LangGraph", "Groq", "Cohere", "Pinecone", "PostgreSQL", "Typescript", "React"],
     features: [
       "Context-aware AI feedback",
       "Streak tracking logic",
@@ -63,7 +63,7 @@ export const PROJECTS = [
     subtitle: "Explainable AI (XAI) loan advisory system.",
     description: "Machine learning driven loan approval and advisory system with model explainability.",
     longDescription: "FinSage leverages LightGBM for prediction and SHAP for explainability, ensuring transparent AI decisions. Integrated with Groq API for personalized financial advice based on model output.",
-    tech: ["Python", "LightGBM", "SHAP", "Groq", "Flask", "React"],
+    tech: ["Python", "Flask", "LightGBM", "SHAP", "LangGraph", "Groq", "Cohere", "Pinecone","PostgreSQL", "Streamlit"],
     features: [
       "LightGBM prediction model",
       "SHAP-based explainability dashboard",
@@ -73,33 +73,5 @@ export const PROJECTS = [
     github: "https://github.com/satyyam01/finsage",
     demo: "#",
     problem: "Loan processing is often opaque and lacks personalized guidance for rejected applicants.",
-  },
-];
-
-export const TIMELINE = [
-  {
-    year: "2022",
-    title: "Started BTech CSE",
-    description: "Began journey at university, focusing on computer science fundamentals.",
-  },
-  {
-    year: "2023",
-    title: "Full Stack Exploration",
-    description: "Explored web technologies and built initial projects like FarmTrack.",
-  },
-  {
-    year: "2023",
-    title: "AI & Systems Focus",
-    description: "Shifted focus towards Backend systems, Redis, and Generative AI integration.",
-  },
-  {
-    year: "2024",
-    title: "Building Scalable Systems",
-    description: "Completed Lumora and FinSage, focusing on RAG and model explainability.",
-  },
-  {
-    year: "Present",
-    title: "SDE Aspirant",
-    description: "Seeking opportunities to build resilient and intelligent backend systems.",
   },
 ];

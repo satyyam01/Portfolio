@@ -14,21 +14,21 @@ const nodes = [
   { 
     id: 2, 
     date: "June – Aug 2024",
-    label: "DRDO Internship", 
+    label: "Intern at DRDO", 
     icon: Landmark, 
-    desc: "Engineered secure and efficient solutions for defense-grade applications, focusing on reliability and precision." 
+    desc: "Led a cross-functional team to engineer real-time object detection systems, achieving an 85% reduction in false positives." 
   },
   { 
     id: 3, 
     date: "Dec 2024 – Feb 2025",
-    label: "Infosys Internship", 
+    label: "Intern at Infosys", 
     icon: Building2, 
-    desc: "Developed enterprise-scale software solutions using industry-standard backend patterns and cloud fundamentals." 
+    desc: "Built scalable ETL workflows and LLM-driven data pipelines, boosting document processing efficiency by 40%." 
   },
   { 
     id: 4, 
     date: "Dec 2025 – Present",
-    label: "Accenture Internship", 
+    label: "Intern at Accenture", 
     icon: Briefcase, 
     desc: "Currently refining high-performance systems and contributing to large-scale digital transformation projects." 
   },
