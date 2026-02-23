@@ -22,21 +22,28 @@ export const StarField = ({ density = 100, fixed = false }: StarFieldProps) => {
   const scrollOpacity = useTransform(scrollY, [0, 800], [1, 0.9]);
   
   const [mounted, setMounted] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     setMounted(true);
+    setIsMobile(window.innerWidth < 768);
+    
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const stars = useMemo(() => {
-    return Array.from({ length: density }).map((_, i) => ({
+    const starCount = isMobile ? Math.floor(density / 3) : density;
+    return Array.from({ length: starCount }).map((_, i) => ({
       id: i,
       x: Math.random() * 100,
       y: Math.random() * 100,
-      size: Math.random() * 1.5 + 0.5,
+      size: Math.random() * (isMobile ? 1 : 1.5) + 0.5,
       duration: Math.random() * 3 + 2,
       delay: Math.random() * 5,
     }));
-  }, [density]);
+  }, [density, isMobile]);
 
   if (!mounted) return null;
 
@@ -82,7 +89,7 @@ export const StarField = ({ density = 100, fixed = false }: StarFieldProps) => {
             height: star.size,
             borderRadius: "50%",
             backgroundColor: star.id % 20 === 0 ? "#60a5fa" : "#ffffff",
-            filter: star.size > 1.5 ? "blur(1px)" : "none",
+            filter: (!isMobile && star.size > 1.5) ? "blur(1px)" : "none",
           }}
         />
       ))}

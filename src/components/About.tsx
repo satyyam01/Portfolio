@@ -13,7 +13,7 @@ export const About = () => {
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1 }}
               className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-zinc-800 bg-zinc-900/50 text-xs font-medium text-blue-400"
             >
               <User className="w-3 h-3" />
@@ -23,7 +23,7 @@ export const About = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1 }}
               className="text-4xl md:text-5xl font-bold tracking-tight"
             >
               About Me
@@ -32,7 +32,7 @@ export const About = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1 }}
               className="h-1 w-20 bg-blue-600 rounded-full"
             />
           </div>
@@ -43,7 +43,7 @@ export const About = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1 }}
               className="prose prose-invert max-w-none"
             >
               <h3 className="text-2xl font-semibold text-white mb-6">
@@ -66,7 +66,7 @@ export const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0.1 }}
                 className="p-6 rounded-2xl bg-zinc-900/30 border border-zinc-800/50"
                >
                   <div className="flex items-center gap-3 mb-4">
@@ -82,7 +82,7 @@ export const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0.1 }}
                 className="p-6 rounded-2xl bg-zinc-900/30 border border-zinc-800/50"
                >
                   <div className="flex items-center gap-3 mb-4">

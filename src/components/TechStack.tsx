@@ -25,7 +25,7 @@ export const TechStack = () => {
                 delay: idx * 0.1,
                 ease: "easeOut" 
               }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1 }}
               whileHover={{ 
                 scale: 1.02,
                 transition: { duration: 0.2 }

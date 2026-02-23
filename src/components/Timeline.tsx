@@ -53,7 +53,7 @@ export const Timeline = () => {
               initial={{ opacity: 0, x: idx % 2 === 0 ? -50 : 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1 }}
               className={`relative z-10 flex items-center w-full md:w-1/2 ${idx % 2 === 0 ? "md:justify-start md:pr-12 md:mr-[50%]" : "md:justify-end md:pl-12 md:ml-[50%]"}`}
             >
               <div className={`flex flex-col ${idx % 2 === 0 ? "md:items-end text-right" : "md:items-start text-left"} p-6 rounded-2xl bg-zinc-900 border border-zinc-800 w-full hover:border-blue-500/50 transition-all group`}>
