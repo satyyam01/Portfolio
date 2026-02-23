@@ -33,10 +33,31 @@ export const Projects = () => {
                 className={`flex flex-col ${idx % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} gap-12 lg:gap-20`}
               >
                 {/* Visual Side */}
-                <div className="flex-1">
-                  <a href={project.demo !== "#" ? project.demo : project.github} target="_blank" rel="noopener noreferrer">
-                    <div className="relative aspect-video rounded-3xl overflow-hidden bg-zinc-900 border border-zinc-800 group cursor-pointer">
-                      <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10" />
+                <div className="flex-1 group">
+                  <motion.a 
+                    href={project.demo !== "#" ? project.demo : project.github} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="block relative"
+                    whileHover={{ y: -8, rotateX: 2, rotateY: -2 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  >
+                    {/* Browser Mockup Frame */}
+                    <div className="relative rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-950 shadow-2xl transition-all duration-500 group-hover:border-blue-500/40 group-hover:shadow-[0_20px_50px_rgba(59,130,246,0.15)]">
+                      {/* Inner Glow */}
+                      <div className="absolute inset-0 border border-white/5 rounded-2xl pointer-events-none z-20" />
+                      
+                      {/* Browser Window Header */}
+                      <div className="h-9 bg-zinc-900/80 backdrop-blur-sm border-b border-zinc-800 flex items-center px-4 gap-1.5">
+                        <div className="w-2.5 h-2.5 rounded-full bg-red-500/40" />
+                        <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/40" />
+                        <div className="w-2.5 h-2.5 rounded-full bg-green-500/40" />
+                      </div>
+
+                    {/* Project Image Container */}
+                    <div className="relative aspect-[16/10] overflow-hidden bg-zinc-900">
+                      {/* Interactive Overlay */}
+                      <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity z-10" />
                       
                       {/* Project Image */}
                       {project.image ? (
@@ -44,25 +65,32 @@ export const Projects = () => {
                           src={project.image} 
                           alt={project.title}
                           fill
-                          className="object-cover transition-transform duration-500 group-hover:scale-110"
+                          className="object-cover object-top transition-all duration-700 group-hover:scale-[1.02]"
+                          priority={idx === 0}
                         />
                       ) : (
                         <div className="absolute inset-0 flex items-center justify-center">
-                          <Icon className="w-24 h-24 text-zinc-800 group-hover:text-blue-500/20 transition-colors" />
+                          <Icon className="w-16 h-16 text-zinc-700 group-hover:text-blue-500/20 transition-colors" />
                         </div>
                       )}
-
-                      <div className="absolute inset-x-0 bottom-0 p-8 flex flex-col justify-end h-full z-20">
-                         <div className="flex gap-2 flex-wrap">
-                          {project.tech.map(t => (
-                            <span key={t} className="px-3 py-1 bg-zinc-950/80 rounded-full text-xs font-mono text-blue-400 border border-zinc-800">
-                              {t}
-                            </span>
-                          ))}
-                         </div>
                       </div>
                     </div>
-                  </a>
+                  </motion.a>
+
+                  {/* Tech Stack - Re-anchored below the image */}
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {project.tech.map((t, i) => (
+                      <motion.span 
+                        key={t}
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: i * 0.05 }}
+                        className="px-3 py-1.5 bg-zinc-900 border border-zinc-800 rounded-lg text-[11px] font-mono text-blue-400 group-hover:border-blue-500/30 transition-colors"
+                      >
+                        {t}
+                      </motion.span>
+                    ))}
+                  </div>
                 </div>
 
                 {/* Content Side */}
