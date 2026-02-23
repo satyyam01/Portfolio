@@ -119,14 +119,19 @@ export const Hero = () => {
             transition={{ delay: 0.6 }}
             className="flex flex-wrap items-center lg:justify-start justify-center gap-4"
           >
-            <button className="px-8 py-4 bg-white text-black font-semibold rounded-xl hover:bg-zinc-200 transition-all flex items-center gap-2 group">
+            <a href="#projects" className="px-8 py-4 bg-white text-black font-semibold rounded-xl hover:bg-zinc-200 transition-all flex items-center gap-2 group">
               View Projects
               <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="px-8 py-4 bg-zinc-900 text-white font-semibold rounded-xl border border-zinc-800 hover:bg-zinc-800 transition-all flex items-center gap-2">
+            </a>
+            <a 
+              href="https://drive.google.com/file/d/1DrOVrIZdgSF--pJ4UdJc07Bp73j1qMNy/view?usp=sharing" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="px-8 py-4 bg-zinc-900 text-white font-semibold rounded-xl border border-zinc-800 hover:bg-zinc-800 transition-all flex items-center gap-2"
+            >
               View Resume
               <Download className="w-4 h-4" />
-            </button>
+            </a>
           </motion.div>
 
           <motion.div
