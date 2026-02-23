@@ -50,10 +50,10 @@ export const About = () => {
                 Hi, I’m Satyam.
               </h3>
               <p className="text-zinc-400 text-lg leading-relaxed mb-6">
-                I build backend systems and AI-driven applications with a focus on structure, reliability, and practical impact. I care about understanding how components fit together — authentication, caching, data modeling, and AI layers — and designing them with intention.
+                I build backend systems and AI-driven applications with a focus on structure, reliability, and practical impact. I care about understanding how components fit together — authentication, caching, data modeling, and AI layers; and designing them with intention.
               </p>
               <p className="text-zinc-400 text-lg leading-relaxed mb-6">
-                Most of my recent work revolves around backend engineering, Redis-based performance optimization, and retrieval-augmented AI systems. I try to prioritize clarity over complexity and build software that behaves predictably under load.
+                Most of my recent work revolves around backend engineering, performance optimization, and retrieval-augmented AI systems. I try to prioritize clarity over complexity and build software that behaves predictably under load.
               </p>
               <p className="text-zinc-400 text-lg leading-relaxed">
                 Right now, I’m focused on strengthening my fundamentals in data structures, system design, and production-grade backend development. The goal is straightforward: become a dependable engineer who can design, build, and improve real systems.

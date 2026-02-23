@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { PROJECTS } from "@/lib/constants";
+import Image from "next/image";
 import { Github, ExternalLink, Box, Activity, ShieldCheck, Zap } from "lucide-react";
 
 const projectIcons: Record<string, any> = {
@@ -33,22 +34,35 @@ export const Projects = () => {
               >
                 {/* Visual Side */}
                 <div className="flex-1">
-                  <div className="relative aspect-video rounded-3xl overflow-hidden bg-zinc-900 border border-zinc-800 group">
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <div className="absolute inset-x-0 bottom-0 p-8 flex flex-col justify-end h-full">
-                       <div className="flex gap-2 flex-wrap">
-                        {project.tech.map(t => (
-                          <span key={t} className="px-3 py-1 bg-zinc-950/80 rounded-full text-xs font-mono text-blue-400 border border-zinc-800">
-                            {t}
-                          </span>
-                        ))}
-                       </div>
+                  <a href={project.demo !== "#" ? project.demo : project.github} target="_blank" rel="noopener noreferrer">
+                    <div className="relative aspect-video rounded-3xl overflow-hidden bg-zinc-900 border border-zinc-800 group cursor-pointer">
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10" />
+                      
+                      {/* Project Image */}
+                      {project.image ? (
+                        <Image 
+                          src={project.image} 
+                          alt={project.title}
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        />
+                      ) : (
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <Icon className="w-24 h-24 text-zinc-800 group-hover:text-blue-500/20 transition-colors" />
+                        </div>
+                      )}
+
+                      <div className="absolute inset-x-0 bottom-0 p-8 flex flex-col justify-end h-full z-20">
+                         <div className="flex gap-2 flex-wrap">
+                          {project.tech.map(t => (
+                            <span key={t} className="px-3 py-1 bg-zinc-950/80 rounded-full text-xs font-mono text-blue-400 border border-zinc-800">
+                              {t}
+                            </span>
+                          ))}
+                         </div>
+                      </div>
                     </div>
-                    {/* Placeholder for architecture diagram / preview */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                       <Icon className="w-24 h-24 text-zinc-800 group-hover:text-blue-500/20 transition-colors" />
-                    </div>
-                  </div>
+                  </a>
                 </div>
 
                 {/* Content Side */}

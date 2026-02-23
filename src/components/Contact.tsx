@@ -19,7 +19,7 @@ export const Contact = () => {
 
           <div className="w-full md:w-auto space-y-4">
             <a
-              href="mailto:nautiyalsatyam01@gmail.com<"
+              href="mailto:nautiyalsatyam01@gmail.com"
               className="flex items-center justify-between gap-8 p-6 rounded-2xl bg-white text-black font-bold group hover:bg-zinc-200 transition-all"
             >
               <div className="flex items-center gap-3">

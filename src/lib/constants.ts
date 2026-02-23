@@ -25,6 +25,7 @@ export const PROJECTS = [
   {
     id: "farmtrack",
     title: "FarmTrack",
+    image: "/farmtrack.png",
     subtitle: "Multi-Role RFID Farm Operations Platform",
     description: "A comprehensive farm management system handling animal tracking, yield analytics, and operational workflows across multiple roles.",
     longDescription: "FarmTrack handles multi-role RBAC for Admins, Workers, and Doctors. It simulates RFID tracking and provides yield analytics, medication schedules, and checkup tracking. Built with a focus on real-time data and secure access.",
@@ -43,6 +44,7 @@ export const PROJECTS = [
   {
     id: "lumora",
     title: "Lumora",
+    image: "/lumora.png",
     subtitle: "AI Journaling Assistant",
     description: "An AI-powered journaling platform that tracks mental well-being and provides context-aware insights.",
     longDescription: "Lumora uses LLMs to provide feedback on journal entries, tracking streaks and awarding badges. It features complex logic for streak calculations based on entry date vs createdAt to maintain consistency across timezones.",
@@ -60,6 +62,7 @@ export const PROJECTS = [
   {
     id: "finsage",
     title: "FinSage",
+    image: "/finsage.png",
     subtitle: "Explainable AI (XAI) loan advisory system.",
     description: "Machine learning driven loan approval and advisory system with model explainability.",
     longDescription: "FinSage leverages LightGBM for prediction and SHAP for explainability, ensuring transparent AI decisions. Integrated with Groq API for personalized financial advice based on model output.",
