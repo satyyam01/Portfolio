@@ -1,11 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { PROJECTS } from "@/lib/constants";
+import { PROJECTS, MINI_PROJECTS } from "@/lib/constants";
 import Image from "next/image";
-import { Github, ExternalLink, Box, Activity, ShieldCheck, Zap } from "lucide-react";
+import { Github, ExternalLink, Box, Activity, ShieldCheck, Zap, Cpu, Radar } from "lucide-react";
 
 const projectIcons: Record<string, any> = {
+  resumetailor: Cpu,
+  hwtrackbot: Radar,
   farmtrack: Box,
   lumora: Activity,
   finsage: ShieldCheck,
@@ -103,6 +105,18 @@ export const Projects = () => {
                     </p>
                   </div>
 
+                  {/* Engineering Metrics Grid */}
+                  {"metrics" in project && project.metrics && (
+                    <div className="grid grid-cols-2 gap-3 p-4 rounded-2xl bg-zinc-950/40 border border-zinc-800/80 font-mono text-xs">
+                      {project.metrics.map(metric => (
+                        <div key={metric.label} className="flex flex-col gap-1 p-3 rounded-xl bg-zinc-900/40 border border-zinc-900">
+                          <span className="text-zinc-500 text-[10px] uppercase tracking-wider">{metric.label}</span>
+                          <span className="text-blue-400 font-semibold text-sm">{metric.value}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
                   <div className="p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800">
                     <h5 className="text-sm font-semibold text-white mb-4 flex items-center gap-2">
                        <Zap className="w-4 h-4 text-yellow-500" />
@@ -132,6 +146,115 @@ export const Projects = () => {
               </motion.div>
             );
           })}
+        </div>
+
+        {/* Workflow & Passion Projects */}
+        <div className="mt-32 border-t border-zinc-800/50 pt-20">
+          <div className="mb-16 text-center">
+            <h3 className="text-2xl md:text-4xl font-bold mb-3">Workflow & Passion Projects</h3>
+            <p className="text-zinc-500 text-sm md:text-base max-w-2xl mx-auto">Bespoke tools, automations, and personal utilities crafted to optimize my daily engineering and creative workflows.</p>
+          </div>
+
+          <div className={MINI_PROJECTS.length === 1 ? "max-w-3xl mx-auto w-full" : "grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto w-full"}>
+            {MINI_PROJECTS.map((project, idx) => {
+              const Icon = projectIcons[project.id as keyof typeof projectIcons] || Box;
+              return (
+                <motion.div
+                  key={project.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  viewport={{ once: true, amount: 0.1 }}
+                  className="flex flex-col p-8 md:p-10 rounded-3xl bg-zinc-900/30 border border-zinc-800/80 hover:border-blue-500/30 hover:bg-zinc-900/50 hover:shadow-[0_20px_50px_rgba(59,130,246,0.06)] transition-all duration-500 w-full group"
+                >
+                  <div className="flex justify-between items-center mb-8">
+                    <div className="w-12 h-12 rounded-2xl bg-zinc-800/80 flex items-center justify-center border border-zinc-700/50 group-hover:bg-blue-600/10 group-hover:border-blue-500/30 transition-colors">
+                      <Icon className="w-6 h-6 text-blue-500" />
+                    </div>
+                    <div className="flex gap-4">
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-zinc-500 hover:text-white transition-colors p-1.5"
+                      >
+                        <Github className="w-5 h-5" />
+                      </a>
+                      {project.demo !== "#" && (
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-zinc-500 hover:text-white transition-colors p-1.5"
+                        >
+                          <ExternalLink className="w-5 h-5" />
+                        </a>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="mb-6">
+                    <span className="text-[10px] md:text-xs font-mono text-blue-500 uppercase tracking-[0.2em] block mb-2 font-bold">
+                      {project.subtitle}
+                    </span>
+                    <h4 className="text-2xl md:text-4xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                      {project.title}
+                    </h4>
+                  </div>
+
+                  <p className="text-zinc-400 text-sm md:text-base leading-relaxed mb-8 font-medium">
+                    {project.description}
+                  </p>
+
+                  {/* Engineering Metrics Grid */}
+                  {"metrics" in project && project.metrics && (
+                    <div className="grid grid-cols-3 gap-4 p-4 md:p-5 rounded-2xl bg-zinc-950/60 border border-zinc-850 font-mono text-xs mb-8">
+                      {project.metrics.map(metric => (
+                        <div key={metric.label} className="flex flex-col text-center">
+                          <span className="text-zinc-500 text-[8px] md:text-[10px] uppercase tracking-widest mb-1">
+                            {metric.label.split(" ")[0]} {metric.label.split(" ")[1] || ""}
+                          </span>
+                          <span className="text-blue-400 font-bold text-xs md:text-sm">
+                            {metric.value}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Features List */}
+                  {"features" in project && project.features && (
+                    <div className="mb-8 p-6 rounded-2xl bg-zinc-950/40 border border-zinc-800/60">
+                      <h5 className="text-xs font-semibold text-white mb-4 flex items-center gap-2 font-mono">
+                        <Zap className="w-3.5 h-3.5 text-yellow-500" />
+                        CORE CAPABILITIES
+                      </h5>
+                      <ul className="space-y-3">
+                        {(project.features as string[]).map(f => (
+                          <li key={f} className="text-zinc-400 text-xs md:text-sm flex items-start gap-3">
+                            <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shrink-0" />
+                            {f}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Tech stack */}
+                  <div className="flex flex-wrap gap-2 pt-6 border-t border-zinc-800/40">
+                    {project.tech.map(t => (
+                      <span
+                        key={t}
+                        className="px-3 py-1.5 bg-zinc-950 border border-zinc-800/80 rounded-lg text-[10px] md:text-[11px] font-mono text-blue-400"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
