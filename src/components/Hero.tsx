@@ -124,7 +124,7 @@ export const Hero = () => {
               <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
             <a 
-              href="https://drive.google.com/file/d/1J3jTMwK8-rv0asSofa0txp3wc0mETFXI/view?usp=sharing" 
+              href={process.env.NEXT_PUBLIC_RESUME_URL || "#"} 
               target="_blank" 
               rel="noopener noreferrer" 
               className="px-8 py-4 bg-zinc-900 text-white font-semibold rounded-xl border border-zinc-800 hover:bg-zinc-800 transition-all flex items-center gap-2"

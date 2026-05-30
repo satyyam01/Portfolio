@@ -32,7 +32,7 @@ export const Navbar = () => {
         <a href="https://www.linkedin.com/in/satyam-nautiyal-378770254/" target="_blank" className="p-2 hover:bg-zinc-800 rounded-full transition-colors">
           <Linkedin className="w-5 h-5" />
         </a>
-        <a href="/resume.pdf" className="px-4 py-2 bg-white text-black text-sm font-medium rounded-full hover:bg-zinc-200 transition-colors">
+        <a href={process.env.NEXT_PUBLIC_RESUME_URL || "#"} target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-white text-black text-sm font-medium rounded-full hover:bg-zinc-200 transition-colors">
           Resume
         </a>
       </div>
