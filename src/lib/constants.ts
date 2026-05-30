@@ -100,20 +100,21 @@ export const PROJECTS = [
 export const MINI_PROJECTS = [
   {
     id: "resumetailor",
-    title: "ResumeTailor",
-    subtitle: "Multi-Agent AI Resume Optimization Machine",
-    description: "A production-grade, multi-agent AI system that scrapes job postings, extracts structured semantic intelligence, and tailors master resumes via a self-correcting LangGraph state machine.",
-    tech: ["LangGraph", "Groq", "Cohere", "Firecrawl", "Node.js", "TypeScript", "Telegram API"],
+    title: "job-bot",
+    subtitle: "AI Resume Tailor Bot",
+    description: "A production-ready, asynchronous, multi-agent orchestration platform that refines resume items recursively using deterministic LLM-in-the-loop scoring cycles and generates dynamic compiled LaTeX PDF deliverables.",
+    tech: ["TypeScript", "Node.js", "Express", "LangGraph", "Groq", "Cohere", "Zod", "Render"],
     features: [
-      "LangGraph-driven self-correcting state machine for iterative optimization loops",
-      "Firecrawl API-powered automated web scraping and markdown parsing",
-      "Vector validation loop utilizing Cohere embeddings to evaluate semantic preservation",
-      "Hallucination guardrails via a secondary critic LLM to enforce skill authenticity"
+      "Recursive LangGraph state machine for multi-agent orchestration and self-correcting optimization loops",
+      "Vector validation loop utilizing Cohere high-dimensional embeddings to ensure semantic preservation",
+      "LLM-in-the-loop plausibility audit subsystem blocking semantic contamination and career claim hallucinations",
+      "Serverless LaTeX PDF compilation pipeline utilizing dynamically-resolved, statically-linked Tectonic binaries",
+      "Adaptive exponential backoff pacing dynamically handling upstream API rate limits for 100% request completion"
     ],
     metrics: [
-      { label: "Semantic Retention", value: ">92%" },
-      { label: "Tailoring Latency", value: "<4.5s" },
-      { label: "ATS Alignment", value: "95%" }
+      { label: "Request Completion", value: "100%" },
+      { label: "End-to-End Latency", value: "< 60s" },
+      { label: "Validation Engine", value: "Vector Math + LLM" }
     ],
     github: "https://github.com/satyyam01/job-bot",
     demo: "#"

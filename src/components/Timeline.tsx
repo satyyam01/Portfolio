@@ -27,10 +27,10 @@ const nodes = [
   },
   { 
     id: 4, 
-    date: "Dec 2025 – Present",
+    date: "Dec 2025 – May 2026",
     label: "Intern at Accenture", 
     icon: Briefcase, 
-    desc: "Currently refining high-performance systems and contributing to large-scale digital transformation projects." 
+    desc: "Architected a multi-agent AI platform automating 15+ complex healthcare workflows, built scalable async enrollment pipelines, and developed real-time SSE observability for decision traceability." 
   },
 ];
 
